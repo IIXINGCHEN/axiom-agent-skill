@@ -97,12 +97,14 @@ axiom-distilled/
 
 SKILL.md 附录和研究文档中使用以下路径占位符, 指向项目外部的参考资源:
 
-| 占位符 | 含义 | 实际位置参考 |
-|--------|------|-------------|
-| `<AXIOM_HOME>` | axiom 命名空间规范目录 (29 个源文件) | Claude Code skill 目录下的 `commands/axiom/` |
-| `<AXIOM_SKILL>` | 旧版 axiom SKILL 项目 | `XBSKILLS/axiom/` (同级目录) |
-| `<NUWA_SKILL>` | nuwa-skill 方法论项目 | `XBSKILLS/nuwa-skill/` (同级目录) |
-| `<CLAUDE_MD>` | 全局 Agent 约束配置 | `~/.claude/CLAUDE.md` (用户主目录) |
+| 占位符 | 含义 | 实际位置参考 | 获取方式 |
+|--------|------|-------------|---------|
+| `<AXIOM_HOME>` | axiom 命名空间规范目录 (29 个源文件) | Claude Code skill 目录下的 `commands/axiom/` | 安装旧版 axiom skill 后自动生成 |
+| `<AXIOM_SKILL>` | 旧版 axiom SKILL 项目 | `XBSKILLS/axiom/` (同级目录) | 本地项目目录，非公开仓库 |
+| `<NUWA_SKILL>` | nuwa-skill 方法论项目 | `XBSKILLS/nuwa-skill/` (同级目录) | 本地项目目录，非公开仓库 |
+| `<CLAUDE_MD>` | 全局 Agent 约束配置 | `~/.claude/CLAUDE.md` (用户主目录) | 用户自行维护的全局配置文件 |
+
+> **注意**: 研究文档中的行号引用基于源文件快照，仅供追溯调研过程。使用蒸馏版无需访问这些外部路径。
 
 ---
 
@@ -139,7 +141,7 @@ axiom 使用中文表达技术概念, 但保留英文缩写和专有名词。首
 | 安全内核 | Security Kernel | 最高优先级、不可覆盖的安全协议 |
 | 自诊断报告 | Self-Diagnostic Report | 每次回复前的结构化状态报告 |
 | 执行合约 | Execution Contract | RFC + 任务列表组成的一次性审批包 |
-| 生产级交付标准 | Production-Grade Deliverable Standards | 12 项 (A-L) 不可妥协的交付要求 |
+| 生产级交付标准 | Production-Grade Deliverable Standards | 12 项 (A-L) 交付标准（10 项刚性 + 2 项推荐） |
 
 ---
 

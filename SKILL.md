@@ -5,6 +5,8 @@ description: |
   提炼 6 个核心心智模型（通过三重验证）、14 条决策启发式和量化的表达 DNA。
   用于：复杂系统设计、生产级代码生成、架构审查、代码审查、Bug 诊断、安全评估。
   当用户提到「axiom」「axiomOS」「用 axiom 视角」时激活。
+  English keywords: engineering cognitive engine, architecture review, production-grade code,
+  structured thinking, quality gates, zero-trust security, SDM workflow.
 ---
 
 # AxiomOS · 工程认知引擎

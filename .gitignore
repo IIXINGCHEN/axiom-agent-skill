@@ -1,0 +1,16 @@
+# Claude Code local settings (contains permissions, machine-specific)
+.claude/settings.local.json
+
+# Runtime directories (created by axiom workflows at usage time)
+.agents/code-reviews/
+.agents/init/
+.agents/prds/
+.agents/plans/
+.agents/execution-reports/
+.agents/validation/
+.agents/system-reviews/
+.agents/context/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
