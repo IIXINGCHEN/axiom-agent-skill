@@ -1,0 +1,22 @@
+interface:
+  display_name: "AxiomOS"
+  short_description: "工程认知引擎：把工程请求路由到质量门控的生产级交付"
+  default_prompt: "用 axiom 视角做这次架构评审 / 生产级实现 / Bug 诊断 / 安全评估。"
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "claude"
+    - "generic"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    claude: "neutral-source"
+    generic: "neutral-source"

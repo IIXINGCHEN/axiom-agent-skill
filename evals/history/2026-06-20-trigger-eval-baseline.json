@@ -1,0 +1,18 @@
+{
+  "snapshot_date": "2026-06-20",
+  "axiom_version": "21.1.0",
+  "gate": "trigger_eval",
+  "threshold": 0.33,
+  "precision": 1.0,
+  "recall": 0.5,
+  "false_positives": 0,
+  "false_negatives": 3,
+  "bucket_pass": {
+    "should_trigger": "3/6",
+    "should_not_trigger": "5/5",
+    "near_neighbor": "4/4"
+  },
+  "false_negative_families": ["architecture_review", "complex_dev", "security_assessment"],
+  "root_cause_note": "Single-signal cases score near the single concept's normalized weight (<0.33); multi-signal cases pass. Not generalization-validated (no holdout split).",
+  "next_step": "Run optimize_description.py + split train/dev/holdout + add blind/adversarial holdout before promotion (yao Phase 9)."
+}

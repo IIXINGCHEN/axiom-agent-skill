@@ -1,0 +1,25 @@
+{
+  "recommended_threshold": 0.33,
+  "negative_patterns": ["总结", "翻译", "解释一下", "头脑风暴", "一次性脚本", "原型", "MVP", "summarize", "translate", "explain", "brainstorm"],
+  "should_trigger": [
+    {"text": "用 axiom 视角审查这个模块的架构。", "family": "axiom_keyword"},
+    {"text": "axiomOS, 帮我诊断这个生产环境的 Bug 根因。", "family": "axiom_keyword"},
+    {"text": "对这个支付服务做一次生产级架构评审。", "family": "architecture_review"},
+    {"text": "用 SDM 流程开发这个跨模块的新功能。", "family": "complex_dev"},
+    {"text": "对这个认证模块做一次安全评估和威胁建模。", "family": "security_assessment"},
+    {"text": "axiom 帮我审查这个 PR 是否符合生产级交付标准。", "family": "code_review"}
+  ],
+  "should_not_trigger": [
+    {"text": "帮我总结一下这篇技术文档的要点。", "family": "summarize"},
+    {"text": "把这段话翻译成英文。", "family": "translate"},
+    {"text": "解释一下 React 的 useEffect 是怎么工作的。", "family": "explain"},
+    {"text": "头脑风暴几个新功能的名字。", "family": "brainstorm"},
+    {"text": "快速搭个原型验证这个想法,不用太严谨。", "family": "prototype_not_for"}
+  ],
+  "near_neighbor": [
+    {"text": "帮我写个小函数,用 TDD。", "family": "trivial_tdd"},
+    {"text": "把这个文件里的 typo 改一下。", "family": "trivial_fix"},
+    {"text": "重构这个函数让它更简洁一点。", "family": "simple_refactor"},
+    {"text": "帮我搭个 MVP 跑通主流程就行。", "family": "mvp_not_for"}
+  ]
+}

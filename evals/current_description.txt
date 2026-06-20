@@ -1,0 +1,1 @@
+Use when the user says axiom / axiomOS / 用 axiom 视角, or asks for production-grade engineering: architecture review, complex feature design, code review, bug diagnosis, security assessment. Do not use for prototypes, MVP validation, one-off scripts, exploratory ML.
