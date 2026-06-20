@@ -1,0 +1,16 @@
+{
+  "recommended_threshold": 0.33,
+  "negative_patterns": ["总结", "翻译", "解释", "头脑风暴", "一次性脚本", "原型", "MVP"],
+  "should_trigger": [
+    {"text": "这个分布式锁的方案做一次架构评审", "family": "architecture_review"},
+    {"text": "生产事故复盘,找出系统性根因", "family": "root_cause"},
+    {"text": "axiom 诊断这个内存泄漏", "family": "axiom_keyword"}
+  ],
+  "should_not_trigger": [
+    {"text": "写个一次性脚本清理过期数据", "family": "one_off_script"},
+    {"text": "快速搭个原型验证交互", "family": "prototype"}
+  ],
+  "near_neighbor": [
+    {"text": "帮我做个 MVP 跑通主流程就行", "family": "mvp_not_for"}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "snapshot_date": "2026-06-20",
+  "axiom_version": "21.1.0",
+  "gate": "trigger_eval + optimize_description (recall hardening, yao Phase 6/9)",
+  "change": "consolidated 5 over-fine positive concepts into 2 (axiom_keyword 0.45 + engineering_cognitive 0.55); added 根因/复盘/事故 phrases; added do_not_directive exclusive negative",
+  "threshold_level": {
+    "dev_errors": 0,
+    "holdout_errors": 0,
+    "blind_errors": 0,
+    "adversarial_errors": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "adversarial_risk_band": "healthy"
+  },
+  "judge_blind_residual": {
+    "errors": 2,
+    "flagged": ["生产事故复盘,找出系统性根因", "axiom 诊断这个内存泄漏"],
+    "note": "independent rubric flags diagnosis-phrasing as borderline; threshold scorer handles both correctly; description-clarity residual constrained by the 1300-token budget"
+  },
+  "generalization": "holdout/blind/adversarial are fresh cases not used for tuning (anti-overfit guard)",
+  "promotion_checker_note": "yao promotion_checker / run_description_optimization_suite are wired for yao's own root+example skills (expects a multi-target 'targets' suite); for external skill axiom the optimize_description cross-split zero-error result is the substantive promotion evidence",
+  "candidate_count": 6,
+  "winner": "Current description"
+}

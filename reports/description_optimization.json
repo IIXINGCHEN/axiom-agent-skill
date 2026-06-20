@@ -1,0 +1,3731 @@
+{
+  "current_description": "Use when the user says axiom / axiomOS / 用 axiom 视角, or asks for production-grade engineering: architecture review, complex feature design, code review, bug diagnosis, security assessment. Do not use for prototypes, MVP validation, one-off scripts, exploratory ML.",
+  "current_candidate": {
+    "id": "current",
+    "label": "Current",
+    "description": "Use when the user says axiom / axiomOS / 用 axiom 视角, or asks for production-grade engineering: architecture review, complex feature design, code review, bug diagnosis, security assessment. Do not use for prototypes, MVP validation, one-off scripts, exploratory ML.",
+    "strategy": "current",
+    "estimated_tokens": 66,
+    "dev": {
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "near_neighbor_pass_rate": 1.0,
+      "should_not_trigger_pass_rate": 1.0
+    },
+    "selection_key": [
+      0,
+      0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      66
+    ],
+    "holdout": {
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "near_neighbor_pass_rate": 1.0,
+      "should_not_trigger_pass_rate": 1.0
+    }
+  },
+  "baseline": null,
+  "winner": {
+    "id": "current",
+    "label": "Current",
+    "description": "Use when the user says axiom / axiomOS / 用 axiom 视角, or asks for production-grade engineering: architecture review, complex feature design, code review, bug diagnosis, security assessment. Do not use for prototypes, MVP validation, one-off scripts, exploratory ML.",
+    "strategy": "current",
+    "estimated_tokens": 66,
+    "dev": {
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "near_neighbor_pass_rate": 1.0,
+      "should_not_trigger_pass_rate": 1.0
+    },
+    "selection_key": [
+      0,
+      0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      66
+    ],
+    "holdout": {
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "near_neighbor_pass_rate": 1.0,
+      "should_not_trigger_pass_rate": 1.0
+    }
+  },
+  "winner_dev_report": {
+    "threshold": 0.33,
+    "threshold_explanation": "Prompts at or above the threshold are treated as trigger matches. Scores are driven primarily by semantic intent coverage: packaging intent, workflow-to-skill transformation intent, reuse/distribution intent, and eval intent. Explicit exclusions such as summary-only, translation-only, one-off, document-only, or do-not-build directives apply direct penalties and can override otherwise similar wording.",
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "bucket_stats": {
+      "should_trigger": {
+        "total": 4,
+        "passed": 4,
+        "pass_rate": 1.0
+      },
+      "should_not_trigger": {
+        "total": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      },
+      "near_neighbor": {
+        "total": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      }
+    },
+    "family_stats": {
+      "architecture_review": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "bug_diagnosis": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "security_assessment": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "axiom_keyword": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "translate": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "explain": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "trivial": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "generic_coding": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      }
+    },
+    "misfires": [],
+    "results": {
+      "should_trigger": [
+        {
+          "prompt": "审查这个微服务的架构有没有扩展性瓶颈",
+          "family": "architecture_review",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "架构",
+                  "审查"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "线上偶发对账不平,做一次根因分析",
+          "family": "bug_diagnosis",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "根因分析",
+                  "根因"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "新版认证流程上线前做安全评估和威胁建模",
+          "family": "security_assessment",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "安全评估",
+                  "威胁建模",
+                  "安全"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "axiom 帮我看看这个跨团队重构方案",
+          "family": "axiom_keyword",
+          "score": 0.454,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "axiom_keyword"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.45,
+            "support_score": 0,
+            "lexical_support": 0.5,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "axiom_keyword": [
+                  "axiom"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        }
+      ],
+      "should_not_trigger": [
+        {
+          "prompt": "把这段会议纪要翻译成英文",
+          "family": "translate",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "translate_only"
+            ],
+            "exclusive_negative_concepts": [
+              "translate_only"
+            ],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0.35,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "translate_only": [
+                  "翻译",
+                  "译成英文"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "prompt": "给我讲讲什么是最终一致性",
+          "family": "explain",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "explain_only"
+            ],
+            "exclusive_negative_concepts": [
+              "explain_only"
+            ],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0.26,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "explain_only": [
+                  "给我讲讲"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "near_neighbor": [
+        {
+          "prompt": "帮我写个工具函数算斐波那契",
+          "family": "trivial",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "用 TDD 实现一个 LRU 缓存",
+          "family": "generic_coding",
+          "score": 0.016,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.2,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {}
+            }
+          }
+        }
+      ]
+    }
+  },
+  "winner_holdout_report": {
+    "threshold": 0.33,
+    "threshold_explanation": "Prompts at or above the threshold are treated as trigger matches. Scores are driven primarily by semantic intent coverage: packaging intent, workflow-to-skill transformation intent, reuse/distribution intent, and eval intent. Explicit exclusions such as summary-only, translation-only, one-off, document-only, or do-not-build directives apply direct penalties and can override otherwise similar wording.",
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "bucket_stats": {
+      "should_trigger": {
+        "total": 3,
+        "passed": 3,
+        "pass_rate": 1.0
+      },
+      "should_not_trigger": {
+        "total": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      },
+      "near_neighbor": {
+        "total": 1,
+        "passed": 1,
+        "pass_rate": 1.0
+      }
+    },
+    "family_stats": {
+      "production_review": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "sdm": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "code_review": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "summarize": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "brainstorm": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "trivial": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      }
+    },
+    "misfires": [],
+    "results": {
+      "should_trigger": [
+        {
+          "prompt": "这个支付链路要生产级实现,先评审设计",
+          "family": "production_review",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "生产级"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "用 SDM 把这个需求拆成可执行阶段",
+          "family": "sdm",
+          "score": 0.533,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.333,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "SDM"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "评审这个 PR 够不够生产级标准",
+          "family": "code_review",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "生产级"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        }
+      ],
+      "should_not_trigger": [
+        {
+          "prompt": "总结这篇 RFC 的要点",
+          "family": "summarize",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "summarize_only"
+            ],
+            "exclusive_negative_concepts": [
+              "summarize_only"
+            ],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0.3,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "summarize_only": [
+                  "总结"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "prompt": "头脑风暴几个功能命名方案",
+          "family": "brainstorm",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "brainstorm_only"
+            ],
+            "exclusive_negative_concepts": [
+              "brainstorm_only"
+            ],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0.24,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "brainstorm_only": [
+                  "头脑风暴"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "near_neighbor": [
+        {
+          "prompt": "改下这个常量名",
+          "family": "trivial",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {}
+            }
+          }
+        }
+      ]
+    }
+  },
+  "current_dev_report": {
+    "threshold": 0.33,
+    "threshold_explanation": "Prompts at or above the threshold are treated as trigger matches. Scores are driven primarily by semantic intent coverage: packaging intent, workflow-to-skill transformation intent, reuse/distribution intent, and eval intent. Explicit exclusions such as summary-only, translation-only, one-off, document-only, or do-not-build directives apply direct penalties and can override otherwise similar wording.",
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "bucket_stats": {
+      "should_trigger": {
+        "total": 4,
+        "passed": 4,
+        "pass_rate": 1.0
+      },
+      "should_not_trigger": {
+        "total": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      },
+      "near_neighbor": {
+        "total": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      }
+    },
+    "family_stats": {
+      "architecture_review": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "bug_diagnosis": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "security_assessment": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "axiom_keyword": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "translate": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "explain": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "trivial": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "generic_coding": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      }
+    },
+    "misfires": [],
+    "results": {
+      "should_trigger": [
+        {
+          "prompt": "审查这个微服务的架构有没有扩展性瓶颈",
+          "family": "architecture_review",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "架构",
+                  "审查"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "线上偶发对账不平,做一次根因分析",
+          "family": "bug_diagnosis",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "根因分析",
+                  "根因"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "新版认证流程上线前做安全评估和威胁建模",
+          "family": "security_assessment",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "安全评估",
+                  "威胁建模",
+                  "安全"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "axiom 帮我看看这个跨团队重构方案",
+          "family": "axiom_keyword",
+          "score": 0.454,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "axiom_keyword"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.45,
+            "support_score": 0,
+            "lexical_support": 0.5,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "axiom_keyword": [
+                  "axiom"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        }
+      ],
+      "should_not_trigger": [
+        {
+          "prompt": "把这段会议纪要翻译成英文",
+          "family": "translate",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "translate_only"
+            ],
+            "exclusive_negative_concepts": [
+              "translate_only"
+            ],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0.35,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "translate_only": [
+                  "翻译",
+                  "译成英文"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "prompt": "给我讲讲什么是最终一致性",
+          "family": "explain",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "explain_only"
+            ],
+            "exclusive_negative_concepts": [
+              "explain_only"
+            ],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0.26,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "explain_only": [
+                  "给我讲讲"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "near_neighbor": [
+        {
+          "prompt": "帮我写个工具函数算斐波那契",
+          "family": "trivial",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "用 TDD 实现一个 LRU 缓存",
+          "family": "generic_coding",
+          "score": 0.016,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.2,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {}
+            }
+          }
+        }
+      ]
+    }
+  },
+  "current_holdout_report": {
+    "threshold": 0.33,
+    "threshold_explanation": "Prompts at or above the threshold are treated as trigger matches. Scores are driven primarily by semantic intent coverage: packaging intent, workflow-to-skill transformation intent, reuse/distribution intent, and eval intent. Explicit exclusions such as summary-only, translation-only, one-off, document-only, or do-not-build directives apply direct penalties and can override otherwise similar wording.",
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "bucket_stats": {
+      "should_trigger": {
+        "total": 3,
+        "passed": 3,
+        "pass_rate": 1.0
+      },
+      "should_not_trigger": {
+        "total": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      },
+      "near_neighbor": {
+        "total": 1,
+        "passed": 1,
+        "pass_rate": 1.0
+      }
+    },
+    "family_stats": {
+      "production_review": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "sdm": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "code_review": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "summarize": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "brainstorm": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "trivial": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      }
+    },
+    "misfires": [],
+    "results": {
+      "should_trigger": [
+        {
+          "prompt": "这个支付链路要生产级实现,先评审设计",
+          "family": "production_review",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "生产级"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "用 SDM 把这个需求拆成可执行阶段",
+          "family": "sdm",
+          "score": 0.533,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.333,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "SDM"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "评审这个 PR 够不够生产级标准",
+          "family": "code_review",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "生产级"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        }
+      ],
+      "should_not_trigger": [
+        {
+          "prompt": "总结这篇 RFC 的要点",
+          "family": "summarize",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "summarize_only"
+            ],
+            "exclusive_negative_concepts": [
+              "summarize_only"
+            ],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0.3,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "summarize_only": [
+                  "总结"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "prompt": "头脑风暴几个功能命名方案",
+          "family": "brainstorm",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "brainstorm_only"
+            ],
+            "exclusive_negative_concepts": [
+              "brainstorm_only"
+            ],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0.24,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "brainstorm_only": [
+                  "头脑风暴"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "near_neighbor": [
+        {
+          "prompt": "改下这个常量名",
+          "family": "trivial",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {}
+            }
+          }
+        }
+      ]
+    }
+  },
+  "winner_blind_holdout_report": {
+    "threshold": 0.33,
+    "threshold_explanation": "Prompts at or above the threshold are treated as trigger matches. Scores are driven primarily by semantic intent coverage: packaging intent, workflow-to-skill transformation intent, reuse/distribution intent, and eval intent. Explicit exclusions such as summary-only, translation-only, one-off, document-only, or do-not-build directives apply direct penalties and can override otherwise similar wording.",
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "bucket_stats": {
+      "should_trigger": {
+        "total": 3,
+        "passed": 3,
+        "pass_rate": 1.0
+      },
+      "should_not_trigger": {
+        "total": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      },
+      "near_neighbor": {
+        "total": 1,
+        "passed": 1,
+        "pass_rate": 1.0
+      }
+    },
+    "family_stats": {
+      "architecture_review": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "root_cause": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "axiom_keyword": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "one_off_script": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "prototype": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "mvp_not_for": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      }
+    },
+    "misfires": [],
+    "results": {
+      "should_trigger": [
+        {
+          "prompt": "这个分布式锁的方案做一次架构评审",
+          "family": "architecture_review",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "架构评审",
+                  "架构"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "生产事故复盘,找出系统性根因",
+          "family": "root_cause",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "根因",
+                  "复盘",
+                  "事故"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "axiom 诊断这个内存泄漏",
+          "family": "axiom_keyword",
+          "score": 1.0,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 1.0,
+            "support_score": 0,
+            "lexical_support": 0.5,
+            "negative_penalty": 0,
+            "coverage_boost": 0.04,
+            "concept_evidence": {
+              "positive": {
+                "axiom_keyword": [
+                  "axiom"
+                ],
+                "engineering_cognitive": [
+                  "诊断"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        }
+      ],
+      "should_not_trigger": [
+        {
+          "prompt": "写个一次性脚本清理过期数据",
+          "family": "one_off_script",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "exclusive_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0.4,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "prototype_not_for": [
+                  "一次性脚本"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "prompt": "快速搭个原型验证交互",
+          "family": "prototype",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "exclusive_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0.4,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "prototype_not_for": [
+                  "原型",
+                  "快速搭"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "near_neighbor": [
+        {
+          "prompt": "帮我做个 MVP 跑通主流程就行",
+          "family": "mvp_not_for",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "exclusive_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.333,
+            "negative_penalty": 0.4,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "prototype_not_for": [
+                  "MVP"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "current_blind_holdout_report": {
+    "threshold": 0.33,
+    "threshold_explanation": "Prompts at or above the threshold are treated as trigger matches. Scores are driven primarily by semantic intent coverage: packaging intent, workflow-to-skill transformation intent, reuse/distribution intent, and eval intent. Explicit exclusions such as summary-only, translation-only, one-off, document-only, or do-not-build directives apply direct penalties and can override otherwise similar wording.",
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "bucket_stats": {
+      "should_trigger": {
+        "total": 3,
+        "passed": 3,
+        "pass_rate": 1.0
+      },
+      "should_not_trigger": {
+        "total": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      },
+      "near_neighbor": {
+        "total": 1,
+        "passed": 1,
+        "pass_rate": 1.0
+      }
+    },
+    "family_stats": {
+      "architecture_review": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "root_cause": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "axiom_keyword": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "one_off_script": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "prototype": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "mvp_not_for": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      }
+    },
+    "misfires": [],
+    "results": {
+      "should_trigger": [
+        {
+          "prompt": "这个分布式锁的方案做一次架构评审",
+          "family": "architecture_review",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "架构评审",
+                  "架构"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "生产事故复盘,找出系统性根因",
+          "family": "root_cause",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "根因",
+                  "复盘",
+                  "事故"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "axiom 诊断这个内存泄漏",
+          "family": "axiom_keyword",
+          "score": 1.0,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 1.0,
+            "support_score": 0,
+            "lexical_support": 0.5,
+            "negative_penalty": 0,
+            "coverage_boost": 0.04,
+            "concept_evidence": {
+              "positive": {
+                "axiom_keyword": [
+                  "axiom"
+                ],
+                "engineering_cognitive": [
+                  "诊断"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        }
+      ],
+      "should_not_trigger": [
+        {
+          "prompt": "写个一次性脚本清理过期数据",
+          "family": "one_off_script",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "exclusive_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0.4,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "prototype_not_for": [
+                  "一次性脚本"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "prompt": "快速搭个原型验证交互",
+          "family": "prototype",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "exclusive_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0.4,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "prototype_not_for": [
+                  "原型",
+                  "快速搭"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "near_neighbor": [
+        {
+          "prompt": "帮我做个 MVP 跑通主流程就行",
+          "family": "mvp_not_for",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "exclusive_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.333,
+            "negative_penalty": 0.4,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "prototype_not_for": [
+                  "MVP"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "baseline_blind_holdout_report": null,
+  "winner_judge_blind_holdout_report": {
+    "judge": "rubric-blind-v1",
+    "judge_explanation": "The blind judge uses a rubric rather than the main threshold scorer. It looks for trigger-action evidence, focused capability evidence, and input or artifact evidence, then blocks on explicit exclusion and exclusive negative signals. This acts as an independent second opinion for blind-holdout prompts.",
+    "false_positives": 0,
+    "false_negatives": 2,
+    "precision": 1.0,
+    "recall": 0.333,
+    "bucket_stats": {
+      "should_trigger": {
+        "total": 3,
+        "passed": 1,
+        "pass_rate": 0.333
+      },
+      "should_not_trigger": {
+        "total": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      },
+      "near_neighbor": {
+        "total": 1,
+        "passed": 1,
+        "pass_rate": 1.0
+      }
+    },
+    "family_stats": {
+      "architecture_review": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "root_cause": {
+        "total": 1,
+        "passed": 0,
+        "false_positives": 0,
+        "false_negatives": 1,
+        "pass_rate": 0.0
+      },
+      "axiom_keyword": {
+        "total": 1,
+        "passed": 0,
+        "false_positives": 0,
+        "false_negatives": 1,
+        "pass_rate": 0.0
+      },
+      "one_off_script": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "prototype": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "mvp_not_for": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      }
+    },
+    "misfires": [
+      {
+        "bucket": "should_trigger",
+        "family": "root_cause",
+        "prompt": "生产事故复盘,找出系统性根因",
+        "reason": "false_negative",
+        "focused_positive_concepts": [
+          "engineering_cognitive"
+        ],
+        "exclusive_negative_concepts": [],
+        "trigger_action_hits": [],
+        "margin": 1
+      },
+      {
+        "bucket": "should_trigger",
+        "family": "axiom_keyword",
+        "prompt": "axiom 诊断这个内存泄漏",
+        "reason": "false_negative",
+        "focused_positive_concepts": [
+          "axiom_keyword",
+          "engineering_cognitive"
+        ],
+        "exclusive_negative_concepts": [],
+        "trigger_action_hits": [],
+        "margin": 2
+      }
+    ],
+    "results": {
+      "should_trigger": [
+        {
+          "prompt": "这个分布式锁的方案做一次架构评审",
+          "family": "architecture_review",
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "judge_detail": {
+            "mode": "judge-rubric",
+            "focused_positive_concepts": [
+              "engineering_cognitive"
+            ],
+            "strong_positive_concepts": [
+              "engineering_cognitive"
+            ],
+            "trigger_action_hits": [
+              "架构评审"
+            ],
+            "input_hits": [
+              "架构"
+            ],
+            "artifact_hits": [
+              "架构评审"
+            ],
+            "capability_overlap": 0,
+            "exclusive_negative_concepts": [],
+            "nonexclusive_negative_concepts": [],
+            "exclusion_hits": [],
+            "generic_exclusion_hits": [],
+            "positive_vote": 4,
+            "negative_vote": 0,
+            "margin": 4,
+            "confidence": 0.88,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "架构评审",
+                  "架构"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "生产事故复盘,找出系统性根因",
+          "family": "root_cause",
+          "predicted_trigger": false,
+          "expected_trigger": true,
+          "passed": false,
+          "judge_detail": {
+            "mode": "judge-rubric",
+            "focused_positive_concepts": [
+              "engineering_cognitive"
+            ],
+            "strong_positive_concepts": [
+              "engineering_cognitive"
+            ],
+            "trigger_action_hits": [],
+            "input_hits": [],
+            "artifact_hits": [],
+            "capability_overlap": 0,
+            "exclusive_negative_concepts": [],
+            "nonexclusive_negative_concepts": [],
+            "exclusion_hits": [],
+            "generic_exclusion_hits": [],
+            "positive_vote": 1,
+            "negative_vote": 0,
+            "margin": 1,
+            "confidence": 0.58,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "根因",
+                  "复盘",
+                  "事故"
+                ]
+              },
+              "negative": {}
+            }
+          },
+          "boundary_case": true
+        },
+        {
+          "prompt": "axiom 诊断这个内存泄漏",
+          "family": "axiom_keyword",
+          "predicted_trigger": false,
+          "expected_trigger": true,
+          "passed": false,
+          "judge_detail": {
+            "mode": "judge-rubric",
+            "focused_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "strong_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "trigger_action_hits": [],
+            "input_hits": [],
+            "artifact_hits": [],
+            "capability_overlap": 0,
+            "exclusive_negative_concepts": [],
+            "nonexclusive_negative_concepts": [],
+            "exclusion_hits": [],
+            "generic_exclusion_hits": [],
+            "positive_vote": 2,
+            "negative_vote": 0,
+            "margin": 2,
+            "confidence": 0.66,
+            "concept_evidence": {
+              "positive": {
+                "axiom_keyword": [
+                  "axiom"
+                ],
+                "engineering_cognitive": [
+                  "诊断"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        }
+      ],
+      "should_not_trigger": [
+        {
+          "prompt": "写个一次性脚本清理过期数据",
+          "family": "one_off_script",
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "judge_detail": {
+            "mode": "judge-rubric",
+            "focused_positive_concepts": [],
+            "strong_positive_concepts": [],
+            "trigger_action_hits": [],
+            "input_hits": [],
+            "artifact_hits": [],
+            "capability_overlap": 0,
+            "exclusive_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "nonexclusive_negative_concepts": [],
+            "exclusion_hits": [
+              "一次性脚本"
+            ],
+            "generic_exclusion_hits": [],
+            "positive_vote": 0,
+            "negative_vote": 3,
+            "margin": -3,
+            "confidence": 0.58,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "prototype_not_for": [
+                  "一次性脚本"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "prompt": "快速搭个原型验证交互",
+          "family": "prototype",
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "judge_detail": {
+            "mode": "judge-rubric",
+            "focused_positive_concepts": [],
+            "strong_positive_concepts": [],
+            "trigger_action_hits": [],
+            "input_hits": [],
+            "artifact_hits": [],
+            "capability_overlap": 0,
+            "exclusive_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "nonexclusive_negative_concepts": [],
+            "exclusion_hits": [
+              "原型"
+            ],
+            "generic_exclusion_hits": [],
+            "positive_vote": 0,
+            "negative_vote": 3,
+            "margin": -3,
+            "confidence": 0.58,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "prototype_not_for": [
+                  "原型",
+                  "快速搭"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "near_neighbor": [
+        {
+          "prompt": "帮我做个 MVP 跑通主流程就行",
+          "family": "mvp_not_for",
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "judge_detail": {
+            "mode": "judge-rubric",
+            "focused_positive_concepts": [],
+            "strong_positive_concepts": [],
+            "trigger_action_hits": [],
+            "input_hits": [],
+            "artifact_hits": [],
+            "capability_overlap": 0,
+            "exclusive_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "nonexclusive_negative_concepts": [],
+            "exclusion_hits": [
+              "MVP"
+            ],
+            "generic_exclusion_hits": [],
+            "positive_vote": 0,
+            "negative_vote": 3,
+            "margin": -3,
+            "confidence": 0.58,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "prototype_not_for": [
+                  "MVP"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "judge_summary": {
+      "agreement_rate": 0.667,
+      "mean_confidence": 0.643,
+      "rubric_version": "blind-v1"
+    }
+  },
+  "current_judge_blind_holdout_report": {
+    "judge": "rubric-blind-v1",
+    "judge_explanation": "The blind judge uses a rubric rather than the main threshold scorer. It looks for trigger-action evidence, focused capability evidence, and input or artifact evidence, then blocks on explicit exclusion and exclusive negative signals. This acts as an independent second opinion for blind-holdout prompts.",
+    "false_positives": 0,
+    "false_negatives": 2,
+    "precision": 1.0,
+    "recall": 0.333,
+    "bucket_stats": {
+      "should_trigger": {
+        "total": 3,
+        "passed": 1,
+        "pass_rate": 0.333
+      },
+      "should_not_trigger": {
+        "total": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      },
+      "near_neighbor": {
+        "total": 1,
+        "passed": 1,
+        "pass_rate": 1.0
+      }
+    },
+    "family_stats": {
+      "architecture_review": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "root_cause": {
+        "total": 1,
+        "passed": 0,
+        "false_positives": 0,
+        "false_negatives": 1,
+        "pass_rate": 0.0
+      },
+      "axiom_keyword": {
+        "total": 1,
+        "passed": 0,
+        "false_positives": 0,
+        "false_negatives": 1,
+        "pass_rate": 0.0
+      },
+      "one_off_script": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "prototype": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "mvp_not_for": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      }
+    },
+    "misfires": [
+      {
+        "bucket": "should_trigger",
+        "family": "root_cause",
+        "prompt": "生产事故复盘,找出系统性根因",
+        "reason": "false_negative",
+        "focused_positive_concepts": [
+          "engineering_cognitive"
+        ],
+        "exclusive_negative_concepts": [],
+        "trigger_action_hits": [],
+        "margin": 1
+      },
+      {
+        "bucket": "should_trigger",
+        "family": "axiom_keyword",
+        "prompt": "axiom 诊断这个内存泄漏",
+        "reason": "false_negative",
+        "focused_positive_concepts": [
+          "axiom_keyword",
+          "engineering_cognitive"
+        ],
+        "exclusive_negative_concepts": [],
+        "trigger_action_hits": [],
+        "margin": 2
+      }
+    ],
+    "results": {
+      "should_trigger": [
+        {
+          "prompt": "这个分布式锁的方案做一次架构评审",
+          "family": "architecture_review",
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "judge_detail": {
+            "mode": "judge-rubric",
+            "focused_positive_concepts": [
+              "engineering_cognitive"
+            ],
+            "strong_positive_concepts": [
+              "engineering_cognitive"
+            ],
+            "trigger_action_hits": [
+              "架构评审"
+            ],
+            "input_hits": [
+              "架构"
+            ],
+            "artifact_hits": [
+              "架构评审"
+            ],
+            "capability_overlap": 0,
+            "exclusive_negative_concepts": [],
+            "nonexclusive_negative_concepts": [],
+            "exclusion_hits": [],
+            "generic_exclusion_hits": [],
+            "positive_vote": 4,
+            "negative_vote": 0,
+            "margin": 4,
+            "confidence": 0.88,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "架构评审",
+                  "架构"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "生产事故复盘,找出系统性根因",
+          "family": "root_cause",
+          "predicted_trigger": false,
+          "expected_trigger": true,
+          "passed": false,
+          "judge_detail": {
+            "mode": "judge-rubric",
+            "focused_positive_concepts": [
+              "engineering_cognitive"
+            ],
+            "strong_positive_concepts": [
+              "engineering_cognitive"
+            ],
+            "trigger_action_hits": [],
+            "input_hits": [],
+            "artifact_hits": [],
+            "capability_overlap": 0,
+            "exclusive_negative_concepts": [],
+            "nonexclusive_negative_concepts": [],
+            "exclusion_hits": [],
+            "generic_exclusion_hits": [],
+            "positive_vote": 1,
+            "negative_vote": 0,
+            "margin": 1,
+            "confidence": 0.58,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "根因",
+                  "复盘",
+                  "事故"
+                ]
+              },
+              "negative": {}
+            }
+          },
+          "boundary_case": true
+        },
+        {
+          "prompt": "axiom 诊断这个内存泄漏",
+          "family": "axiom_keyword",
+          "predicted_trigger": false,
+          "expected_trigger": true,
+          "passed": false,
+          "judge_detail": {
+            "mode": "judge-rubric",
+            "focused_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "strong_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "trigger_action_hits": [],
+            "input_hits": [],
+            "artifact_hits": [],
+            "capability_overlap": 0,
+            "exclusive_negative_concepts": [],
+            "nonexclusive_negative_concepts": [],
+            "exclusion_hits": [],
+            "generic_exclusion_hits": [],
+            "positive_vote": 2,
+            "negative_vote": 0,
+            "margin": 2,
+            "confidence": 0.66,
+            "concept_evidence": {
+              "positive": {
+                "axiom_keyword": [
+                  "axiom"
+                ],
+                "engineering_cognitive": [
+                  "诊断"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        }
+      ],
+      "should_not_trigger": [
+        {
+          "prompt": "写个一次性脚本清理过期数据",
+          "family": "one_off_script",
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "judge_detail": {
+            "mode": "judge-rubric",
+            "focused_positive_concepts": [],
+            "strong_positive_concepts": [],
+            "trigger_action_hits": [],
+            "input_hits": [],
+            "artifact_hits": [],
+            "capability_overlap": 0,
+            "exclusive_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "nonexclusive_negative_concepts": [],
+            "exclusion_hits": [
+              "一次性脚本"
+            ],
+            "generic_exclusion_hits": [],
+            "positive_vote": 0,
+            "negative_vote": 3,
+            "margin": -3,
+            "confidence": 0.58,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "prototype_not_for": [
+                  "一次性脚本"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "prompt": "快速搭个原型验证交互",
+          "family": "prototype",
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "judge_detail": {
+            "mode": "judge-rubric",
+            "focused_positive_concepts": [],
+            "strong_positive_concepts": [],
+            "trigger_action_hits": [],
+            "input_hits": [],
+            "artifact_hits": [],
+            "capability_overlap": 0,
+            "exclusive_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "nonexclusive_negative_concepts": [],
+            "exclusion_hits": [
+              "原型"
+            ],
+            "generic_exclusion_hits": [],
+            "positive_vote": 0,
+            "negative_vote": 3,
+            "margin": -3,
+            "confidence": 0.58,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "prototype_not_for": [
+                  "原型",
+                  "快速搭"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "near_neighbor": [
+        {
+          "prompt": "帮我做个 MVP 跑通主流程就行",
+          "family": "mvp_not_for",
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "judge_detail": {
+            "mode": "judge-rubric",
+            "focused_positive_concepts": [],
+            "strong_positive_concepts": [],
+            "trigger_action_hits": [],
+            "input_hits": [],
+            "artifact_hits": [],
+            "capability_overlap": 0,
+            "exclusive_negative_concepts": [
+              "prototype_not_for"
+            ],
+            "nonexclusive_negative_concepts": [],
+            "exclusion_hits": [
+              "MVP"
+            ],
+            "generic_exclusion_hits": [],
+            "positive_vote": 0,
+            "negative_vote": 3,
+            "margin": -3,
+            "confidence": 0.58,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {
+                "prototype_not_for": [
+                  "MVP"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "judge_summary": {
+      "agreement_rate": 0.667,
+      "mean_confidence": 0.643,
+      "rubric_version": "blind-v1"
+    }
+  },
+  "baseline_judge_blind_holdout_report": null,
+  "winner_adversarial_holdout_report": {
+    "threshold": 0.33,
+    "threshold_explanation": "Prompts at or above the threshold are treated as trigger matches. Scores are driven primarily by semantic intent coverage: packaging intent, workflow-to-skill transformation intent, reuse/distribution intent, and eval intent. Explicit exclusions such as summary-only, translation-only, one-off, document-only, or do-not-build directives apply direct penalties and can override otherwise similar wording.",
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "bucket_stats": {
+      "should_trigger": {
+        "total": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      },
+      "should_not_trigger": {
+        "total": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      },
+      "near_neighbor": {
+        "total": 1,
+        "passed": 1,
+        "pass_rate": 1.0
+      }
+    },
+    "family_stats": {
+      "architecture_review": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "axiom_deep_diagnosis": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "explicit_do_not": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "keyword_but_summary": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "routes_to_thinking_skills": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      }
+    },
+    "misfires": [],
+    "results": {
+      "should_trigger": [
+        {
+          "prompt": "这个架构有没有更优雅的实现,做一次正式评审",
+          "family": "architecture_review",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "架构"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "axiom 别只看表面,做深度根因分析",
+          "family": "axiom_deep_diagnosis",
+          "score": 0.987,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 1.0,
+            "support_score": 0,
+            "lexical_support": 0.333,
+            "negative_penalty": 0,
+            "coverage_boost": 0.04,
+            "concept_evidence": {
+              "positive": {
+                "axiom_keyword": [
+                  "axiom"
+                ],
+                "engineering_cognitive": [
+                  "根因分析",
+                  "根因"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        }
+      ],
+      "should_not_trigger": [
+        {
+          "prompt": "不要用 axiom,直接帮我改这个 bug",
+          "family": "explicit_do_not",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "axiom_keyword"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "do_not_directive"
+            ],
+            "exclusive_negative_concepts": [
+              "do_not_directive"
+            ],
+            "semantic_coverage": 0.45,
+            "support_score": 0,
+            "lexical_support": 0.5,
+            "negative_penalty": 0.45,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "axiom_keyword": [
+                  "axiom",
+                  "用 axiom"
+                ]
+              },
+              "negative": {
+                "do_not_directive": [
+                  "不要用",
+                  "直接帮我改"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "prompt": "用 axiom 视角帮我总结一下这个模块",
+          "family": "keyword_but_summary",
+          "score": 0.017,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "axiom_keyword"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "summarize_only"
+            ],
+            "exclusive_negative_concepts": [
+              "summarize_only"
+            ],
+            "semantic_coverage": 0.45,
+            "support_score": 0,
+            "lexical_support": 0.667,
+            "negative_penalty": 0.3,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "axiom_keyword": [
+                  "axiom",
+                  "axiom 视角",
+                  "用 axiom"
+                ]
+              },
+              "negative": {
+                "summarize_only": [
+                  "总结一下",
+                  "总结"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "near_neighbor": [
+        {
+          "prompt": "用 thinking-theory-of-constraints 分析这个瓶颈",
+          "family": "routes_to_thinking_skills",
+          "score": 0.013,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.167,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {}
+            }
+          }
+        }
+      ]
+    }
+  },
+  "current_adversarial_holdout_report": {
+    "threshold": 0.33,
+    "threshold_explanation": "Prompts at or above the threshold are treated as trigger matches. Scores are driven primarily by semantic intent coverage: packaging intent, workflow-to-skill transformation intent, reuse/distribution intent, and eval intent. Explicit exclusions such as summary-only, translation-only, one-off, document-only, or do-not-build directives apply direct penalties and can override otherwise similar wording.",
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "bucket_stats": {
+      "should_trigger": {
+        "total": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      },
+      "should_not_trigger": {
+        "total": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      },
+      "near_neighbor": {
+        "total": 1,
+        "passed": 1,
+        "pass_rate": 1.0
+      }
+    },
+    "family_stats": {
+      "architecture_review": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "axiom_deep_diagnosis": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "explicit_do_not": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "keyword_but_summary": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      },
+      "routes_to_thinking_skills": {
+        "total": 1,
+        "passed": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "pass_rate": 1.0
+      }
+    },
+    "misfires": [],
+    "results": {
+      "should_trigger": [
+        {
+          "prompt": "这个架构有没有更优雅的实现,做一次正式评审",
+          "family": "architecture_review",
+          "score": 0.506,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.55,
+            "support_score": 0,
+            "lexical_support": 0.0,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "engineering_cognitive": [
+                  "架构"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        },
+        {
+          "prompt": "axiom 别只看表面,做深度根因分析",
+          "family": "axiom_deep_diagnosis",
+          "score": 0.987,
+          "predicted_trigger": true,
+          "expected_trigger": true,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 1.0,
+            "support_score": 0,
+            "lexical_support": 0.333,
+            "negative_penalty": 0,
+            "coverage_boost": 0.04,
+            "concept_evidence": {
+              "positive": {
+                "axiom_keyword": [
+                  "axiom"
+                ],
+                "engineering_cognitive": [
+                  "根因分析",
+                  "根因"
+                ]
+              },
+              "negative": {}
+            }
+          }
+        }
+      ],
+      "should_not_trigger": [
+        {
+          "prompt": "不要用 axiom,直接帮我改这个 bug",
+          "family": "explicit_do_not",
+          "score": 0.0,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "axiom_keyword"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "do_not_directive"
+            ],
+            "exclusive_negative_concepts": [
+              "do_not_directive"
+            ],
+            "semantic_coverage": 0.45,
+            "support_score": 0,
+            "lexical_support": 0.5,
+            "negative_penalty": 0.45,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "axiom_keyword": [
+                  "axiom",
+                  "用 axiom"
+                ]
+              },
+              "negative": {
+                "do_not_directive": [
+                  "不要用",
+                  "直接帮我改"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "prompt": "用 axiom 视角帮我总结一下这个模块",
+          "family": "keyword_but_summary",
+          "score": 0.017,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [
+              "axiom_keyword"
+            ],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [
+              "summarize_only"
+            ],
+            "exclusive_negative_concepts": [
+              "summarize_only"
+            ],
+            "semantic_coverage": 0.45,
+            "support_score": 0,
+            "lexical_support": 0.667,
+            "negative_penalty": 0.3,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {
+                "axiom_keyword": [
+                  "axiom",
+                  "axiom 视角",
+                  "用 axiom"
+                ]
+              },
+              "negative": {
+                "summarize_only": [
+                  "总结一下",
+                  "总结"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "near_neighbor": [
+        {
+          "prompt": "用 thinking-theory-of-constraints 分析这个瓶颈",
+          "family": "routes_to_thinking_skills",
+          "score": 0.013,
+          "predicted_trigger": false,
+          "expected_trigger": false,
+          "passed": true,
+          "score_detail": {
+            "mode": "semantic-intent",
+            "desired_positive_concepts": [
+              "axiom_keyword",
+              "engineering_cognitive"
+            ],
+            "matched_desired_concepts": [],
+            "extra_positive_concepts": [],
+            "matched_negative_concepts": [],
+            "exclusive_negative_concepts": [],
+            "semantic_coverage": 0.0,
+            "support_score": 0,
+            "lexical_support": 0.167,
+            "negative_penalty": 0,
+            "coverage_boost": 0.0,
+            "concept_evidence": {
+              "positive": {},
+              "negative": {}
+            }
+          }
+        }
+      ]
+    }
+  },
+  "baseline_adversarial_holdout_report": null,
+  "candidates": [
+    {
+      "id": "current",
+      "label": "Current",
+      "description": "Use when the user says axiom / axiomOS / 用 axiom 视角, or asks for production-grade engineering: architecture review, complex feature design, code review, bug diagnosis, security assessment. Do not use for prototypes, MVP validation, one-off scripts, exploratory ML.",
+      "strategy": "current",
+      "estimated_tokens": 66,
+      "dev": {
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      },
+      "selection_key": [
+        0,
+        0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        66
+      ],
+      "holdout": {
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      }
+    },
+    {
+      "id": "minimal",
+      "label": "Minimal",
+      "description": "Production-grade engineering cognitive engine: architecture review, complex development, code review, bug diagnosis, security assessment. Use when asked to architecture review, production-grade implementation, or code review.",
+      "strategy": "minimal_template",
+      "estimated_tokens": 56,
+      "dev": {
+        "false_positives": 0,
+        "false_negatives": 1,
+        "precision": 1.0,
+        "recall": 0.75,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      },
+      "selection_key": [
+        0,
+        1,
+        -1.0,
+        -1.0,
+        -1.0,
+        -0.75,
+        56
+      ],
+      "holdout": {
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      }
+    },
+    {
+      "id": "guardrail",
+      "label": "Guardrail",
+      "description": "Production-grade engineering cognitive engine: architecture review, complex development, code review, bug diagnosis, security assessment from architecture, code, PR, bug report, security, 架构, 代码, PR, Bug, or 安全. Do not use for prototypes, MVP validation, or one-off scripts.",
+      "strategy": "guardrail_template",
+      "estimated_tokens": 68,
+      "dev": {
+        "false_positives": 0,
+        "false_negatives": 1,
+        "precision": 1.0,
+        "recall": 0.75,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      },
+      "selection_key": [
+        0,
+        1,
+        -1.0,
+        -1.0,
+        -1.0,
+        -0.75,
+        68
+      ],
+      "holdout": {
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      }
+    },
+    {
+      "id": "balanced",
+      "label": "Balanced",
+      "description": "Production-grade engineering cognitive engine: architecture review, complex development, code review, bug diagnosis, security assessment from architecture, code, PR, bug report, security, 架构, 代码, PR, Bug, or 安全. Use when asked to architecture review, production-grade implementation, or code review.",
+      "strategy": "balanced_template",
+      "estimated_tokens": 74,
+      "dev": {
+        "false_positives": 0,
+        "false_negatives": 1,
+        "precision": 1.0,
+        "recall": 0.75,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      },
+      "selection_key": [
+        0,
+        1,
+        -1.0,
+        -1.0,
+        -1.0,
+        -0.75,
+        74
+      ],
+      "holdout": {
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      }
+    },
+    {
+      "id": "boundary",
+      "label": "Boundary",
+      "description": "Production-grade engineering cognitive engine: architecture review, complex development, code review, bug diagnosis, security assessment from architecture, code, PR, bug report, security, 架构, 代码, PR, Bug, or 安全. Use when asked to architecture review, production-grade implementation, or code review. Do not use for prototypes, MVP validation, or one-off scripts.",
+      "strategy": "boundary_template",
+      "estimated_tokens": 90,
+      "dev": {
+        "false_positives": 0,
+        "false_negatives": 1,
+        "precision": 1.0,
+        "recall": 0.75,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      },
+      "selection_key": [
+        0,
+        1,
+        -1.0,
+        -1.0,
+        -1.0,
+        -0.75,
+        90
+      ],
+      "holdout": {
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      }
+    },
+    {
+      "id": "artifact_aware",
+      "label": "Artifact Aware",
+      "description": "Production-grade engineering cognitive engine: architecture review, complex development, code review, bug diagnosis, security assessment from architecture, code, PR, bug report, security, 架构, 代码, PR, Bug, or 安全. Trigger when requests mention architecture review, production-grade code, bug diagnosis, or security report and the job is to architecture review, production-grade implementation, or code review.",
+      "strategy": "artifact_template",
+      "estimated_tokens": 101,
+      "dev": {
+        "false_positives": 0,
+        "false_negatives": 1,
+        "precision": 1.0,
+        "recall": 0.75,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      },
+      "selection_key": [
+        0,
+        1,
+        -1.0,
+        -1.0,
+        -1.0,
+        -0.75,
+        101
+      ],
+      "holdout": {
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      }
+    }
+  ],
+  "selection_logic": {
+    "priority": [
+      "fewest false positives",
+      "fewest false negatives",
+      "highest near-neighbor pass rate",
+      "highest negative pass rate",
+      "highest precision",
+      "highest recall",
+      "shortest description"
+    ]
+  },
+  "comparison": {
+    "winner_vs_current_dev": {
+      "baseline_false_positives": 0,
+      "baseline_false_negatives": 0,
+      "improved_false_positives": 0,
+      "improved_false_negatives": 0,
+      "false_positive_delta": 0,
+      "false_negative_delta": 0,
+      "baseline_precision": 1.0,
+      "improved_precision": 1.0,
+      "baseline_recall": 1.0,
+      "improved_recall": 1.0
+    },
+    "winner_vs_current_holdout": {
+      "baseline_false_positives": 0,
+      "baseline_false_negatives": 0,
+      "improved_false_positives": 0,
+      "improved_false_negatives": 0,
+      "false_positive_delta": 0,
+      "false_negative_delta": 0,
+      "baseline_precision": 1.0,
+      "improved_precision": 1.0,
+      "baseline_recall": 1.0,
+      "improved_recall": 1.0
+    },
+    "winner_vs_current_blind_holdout": {
+      "baseline_false_positives": 0,
+      "baseline_false_negatives": 0,
+      "improved_false_positives": 0,
+      "improved_false_negatives": 0,
+      "false_positive_delta": 0,
+      "false_negative_delta": 0,
+      "baseline_precision": 1.0,
+      "improved_precision": 1.0,
+      "baseline_recall": 1.0,
+      "improved_recall": 1.0
+    },
+    "winner_vs_baseline_dev": null,
+    "winner_vs_baseline_holdout": null,
+    "winner_vs_baseline_blind_holdout": null,
+    "winner_vs_current_judge_blind_holdout": {
+      "baseline_false_positives": 0,
+      "baseline_false_negatives": 2,
+      "improved_false_positives": 0,
+      "improved_false_negatives": 2,
+      "false_positive_delta": 0,
+      "false_negative_delta": 0,
+      "baseline_precision": 1.0,
+      "improved_precision": 1.0,
+      "baseline_recall": 0.333,
+      "improved_recall": 0.333
+    },
+    "winner_vs_baseline_judge_blind_holdout": null,
+    "winner_vs_current_adversarial_holdout": {
+      "baseline_false_positives": 0,
+      "baseline_false_negatives": 0,
+      "improved_false_positives": 0,
+      "improved_false_negatives": 0,
+      "false_positive_delta": 0,
+      "false_negative_delta": 0,
+      "baseline_precision": 1.0,
+      "improved_precision": 1.0,
+      "baseline_recall": 1.0,
+      "improved_recall": 1.0
+    },
+    "winner_vs_baseline_adversarial_holdout": null
+  },
+  "acceptance_gates": {
+    "selection_basis": "dev only",
+    "holdout_non_regression": {
+      "winner": {
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      },
+      "current": {
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      },
+      "baseline": null,
+      "winner_calibration": {
+        "threshold": 0.33,
+        "mean_positive_score": 0.515,
+        "mean_non_trigger_score": 0.0,
+        "mean_near_neighbor_score": 0.0,
+        "min_positive_score": 0.506,
+        "max_non_trigger_score": 0.0,
+        "score_gap": 0.506,
+        "threshold_margin": 0.176,
+        "positive_threshold_buffer": 0.176,
+        "negative_threshold_buffer": 0.33,
+        "boundary_case_count": 0,
+        "boundary_case_rate": 0.0,
+        "risk_band": "healthy"
+      },
+      "current_calibration": {
+        "threshold": 0.33,
+        "mean_positive_score": 0.515,
+        "mean_non_trigger_score": 0.0,
+        "mean_near_neighbor_score": 0.0,
+        "min_positive_score": 0.506,
+        "max_non_trigger_score": 0.0,
+        "score_gap": 0.506,
+        "threshold_margin": 0.176,
+        "positive_threshold_buffer": 0.176,
+        "negative_threshold_buffer": 0.33,
+        "boundary_case_count": 0,
+        "boundary_case_rate": 0.0,
+        "risk_band": "healthy"
+      },
+      "baseline_calibration": null,
+      "winner_family_health": {
+        "family_count": 6,
+        "clean_family_count": 6,
+        "failing_families": [],
+        "weakest_family": {
+          "family": "trivial",
+          "pass_rate": 1.0,
+          "errors": 0
+        }
+      },
+      "current_family_health": {
+        "family_count": 6,
+        "clean_family_count": 6,
+        "failing_families": [],
+        "weakest_family": {
+          "family": "trivial",
+          "pass_rate": 1.0,
+          "errors": 0
+        }
+      },
+      "baseline_family_health": null
+    },
+    "blind_holdout_non_regression": {
+      "winner": {
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      },
+      "current": {
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      },
+      "baseline": null,
+      "winner_calibration": {
+        "threshold": 0.33,
+        "mean_positive_score": 0.671,
+        "mean_non_trigger_score": 0.0,
+        "mean_near_neighbor_score": 0.0,
+        "min_positive_score": 0.506,
+        "max_non_trigger_score": 0.0,
+        "score_gap": 0.506,
+        "threshold_margin": 0.176,
+        "positive_threshold_buffer": 0.176,
+        "negative_threshold_buffer": 0.33,
+        "boundary_case_count": 0,
+        "boundary_case_rate": 0.0,
+        "risk_band": "healthy"
+      },
+      "current_calibration": {
+        "threshold": 0.33,
+        "mean_positive_score": 0.671,
+        "mean_non_trigger_score": 0.0,
+        "mean_near_neighbor_score": 0.0,
+        "min_positive_score": 0.506,
+        "max_non_trigger_score": 0.0,
+        "score_gap": 0.506,
+        "threshold_margin": 0.176,
+        "positive_threshold_buffer": 0.176,
+        "negative_threshold_buffer": 0.33,
+        "boundary_case_count": 0,
+        "boundary_case_rate": 0.0,
+        "risk_band": "healthy"
+      },
+      "baseline_calibration": null,
+      "winner_family_health": {
+        "family_count": 6,
+        "clean_family_count": 6,
+        "failing_families": [],
+        "weakest_family": {
+          "family": "root_cause",
+          "pass_rate": 1.0,
+          "errors": 0
+        }
+      },
+      "current_family_health": {
+        "family_count": 6,
+        "clean_family_count": 6,
+        "failing_families": [],
+        "weakest_family": {
+          "family": "root_cause",
+          "pass_rate": 1.0,
+          "errors": 0
+        }
+      },
+      "baseline_family_health": null
+    },
+    "judge_blind_holdout_non_regression": {
+      "winner": {
+        "false_positives": 0,
+        "false_negatives": 2,
+        "precision": 1.0,
+        "recall": 0.333,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0,
+        "judge_summary": {
+          "agreement_rate": 0.667,
+          "mean_confidence": 0.643,
+          "rubric_version": "blind-v1"
+        }
+      },
+      "current": {
+        "false_positives": 0,
+        "false_negatives": 2,
+        "precision": 1.0,
+        "recall": 0.333,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0,
+        "judge_summary": {
+          "agreement_rate": 0.667,
+          "mean_confidence": 0.643,
+          "rubric_version": "blind-v1"
+        }
+      },
+      "baseline": null,
+      "winner_calibration": null,
+      "current_calibration": null,
+      "baseline_calibration": null,
+      "winner_family_health": {
+        "family_count": 6,
+        "clean_family_count": 4,
+        "failing_families": [
+          {
+            "family": "axiom_keyword",
+            "errors": 1,
+            "pass_rate": 0.0
+          },
+          {
+            "family": "root_cause",
+            "errors": 1,
+            "pass_rate": 0.0
+          }
+        ],
+        "weakest_family": {
+          "family": "root_cause",
+          "pass_rate": 0.0,
+          "errors": 1
+        }
+      },
+      "current_family_health": {
+        "family_count": 6,
+        "clean_family_count": 4,
+        "failing_families": [
+          {
+            "family": "axiom_keyword",
+            "errors": 1,
+            "pass_rate": 0.0
+          },
+          {
+            "family": "root_cause",
+            "errors": 1,
+            "pass_rate": 0.0
+          }
+        ],
+        "weakest_family": {
+          "family": "root_cause",
+          "pass_rate": 0.0,
+          "errors": 1
+        }
+      },
+      "baseline_family_health": null
+    },
+    "adversarial_holdout_non_regression": {
+      "winner": {
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      },
+      "current": {
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "near_neighbor_pass_rate": 1.0,
+        "should_not_trigger_pass_rate": 1.0
+      },
+      "baseline": null,
+      "winner_calibration": {
+        "threshold": 0.33,
+        "mean_positive_score": 0.746,
+        "mean_non_trigger_score": 0.01,
+        "mean_near_neighbor_score": 0.013,
+        "min_positive_score": 0.506,
+        "max_non_trigger_score": 0.017,
+        "score_gap": 0.489,
+        "threshold_margin": 0.176,
+        "positive_threshold_buffer": 0.176,
+        "negative_threshold_buffer": 0.313,
+        "boundary_case_count": 0,
+        "boundary_case_rate": 0.0,
+        "risk_band": "healthy"
+      },
+      "current_calibration": {
+        "threshold": 0.33,
+        "mean_positive_score": 0.746,
+        "mean_non_trigger_score": 0.01,
+        "mean_near_neighbor_score": 0.013,
+        "min_positive_score": 0.506,
+        "max_non_trigger_score": 0.017,
+        "score_gap": 0.489,
+        "threshold_margin": 0.176,
+        "positive_threshold_buffer": 0.176,
+        "negative_threshold_buffer": 0.313,
+        "boundary_case_count": 0,
+        "boundary_case_rate": 0.0,
+        "risk_band": "healthy"
+      },
+      "baseline_calibration": null,
+      "winner_family_health": {
+        "family_count": 5,
+        "clean_family_count": 5,
+        "failing_families": [],
+        "weakest_family": {
+          "family": "routes_to_thinking_skills",
+          "pass_rate": 1.0,
+          "errors": 0
+        }
+      },
+      "current_family_health": {
+        "family_count": 5,
+        "clean_family_count": 5,
+        "failing_families": [],
+        "weakest_family": {
+          "family": "routes_to_thinking_skills",
+          "pass_rate": 1.0,
+          "errors": 0
+        }
+      },
+      "baseline_family_health": null
+    }
+  },
+  "summary": {
+    "winner_label": "Current",
+    "winner_tokens": 66,
+    "current_tokens": 66,
+    "winner_dev_total_errors": 0,
+    "current_dev_total_errors": 0,
+    "winner_holdout_total_errors": 0,
+    "current_holdout_total_errors": 0,
+    "winner_blind_holdout_total_errors": 0,
+    "current_blind_holdout_total_errors": 0,
+    "winner_judge_blind_holdout_total_errors": 2,
+    "current_judge_blind_holdout_total_errors": 2,
+    "winner_adversarial_holdout_total_errors": 0,
+    "current_adversarial_holdout_total_errors": 0,
+    "winner_judge_blind_agreement_rate": 0.667,
+    "winner_adversarial_risk_band": "healthy",
+    "winner_adversarial_score_gap": 0.489,
+    "candidate_count": 6
+  }
+}

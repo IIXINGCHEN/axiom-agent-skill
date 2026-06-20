@@ -16,40 +16,23 @@
       "架构评审", "生产级代码", "Bug 诊断报告", "安全评估报告"
     ]
   },
-  "fallback_positive_concepts": [
-    "axiom_keyword", "architecture_review", "complex_dev", "security_assessment", "code_review_debug"
-  ],
+  "fallback_positive_concepts": ["axiom_keyword", "engineering_cognitive"],
   "positive_concepts": {
     "axiom_keyword": {
-      "weight": 0.30,
+      "weight": 0.45,
       "phrases": ["axiom", "axiomOS", "axiom 视角", "用 axiom", "用axiom", "axiomos"]
     },
-    "architecture_review": {
-      "weight": 0.24,
+    "engineering_cognitive": {
+      "weight": 0.55,
       "phrases": [
         "architecture review", "architectural review", "production-grade", "production grade",
-        "架构评审", "架构审查", "架构评估", "生产级", "设计评审", "架构", "审查"
-      ]
-    },
-    "complex_dev": {
-      "weight": 0.20,
-      "phrases": [
+        "架构评审", "架构审查", "架构评估", "生产级", "设计评审", "架构", "审查",
         "complex feature", "multi-module", "cross-module", "SDM", "standard development mode",
-        "复杂开发", "跨模块", "复杂功能", "新功能开发", "新功能"
-      ]
-    },
-    "security_assessment": {
-      "weight": 0.16,
-      "phrases": [
+        "复杂开发", "跨模块", "复杂功能", "新功能开发", "新功能",
+        "code review", "review this PR", "bug diagnosis", "root cause", "debug",
+        "代码审查", "审查 PR", "Bug 诊断", "根因分析", "根因", "复盘", "事故", "诊断",
         "security assessment", "threat modeling", "security review", "penetration",
         "安全评估", "威胁建模", "安全审查", "渗透", "安全"
-      ]
-    },
-    "code_review_debug": {
-      "weight": 0.10,
-      "phrases": [
-        "code review", "review this PR", "bug diagnosis", "root cause", " RCA", "debug",
-        "代码审查", "审查 PR", "Bug 诊断", "根因分析", "诊断", "审查"
       ]
     }
   },
@@ -80,6 +63,10 @@
     "trivial_task": {
       "weight": 0.20, "exclusive": true,
       "phrases": ["typo", "fix typo", "改个字段", "小函数", "改一下 typo", "简单重构", "更简洁一点"]
+    },
+    "do_not_directive": {
+      "weight": 0.45, "exclusive": true,
+      "phrases": ["不要用", "不用 axiom", "不用axiom", "别用 axiom", "别用axiom", "直接帮我改", "do not use axiom", "don't use axiom"]
     }
   }
 }

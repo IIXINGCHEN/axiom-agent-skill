@@ -1,0 +1,15 @@
+{
+  "recommended_threshold": 0.33,
+  "negative_patterns": ["总结", "翻译", "解释", "头脑风暴", "一次性脚本", "原型", "MVP", "不要用"],
+  "should_trigger": [
+    {"text": "这个架构有没有更优雅的实现,做一次正式评审", "family": "architecture_review"},
+    {"text": "axiom 别只看表面,做深度根因分析", "family": "axiom_deep_diagnosis"}
+  ],
+  "should_not_trigger": [
+    {"text": "不要用 axiom,直接帮我改这个 bug", "family": "explicit_do_not"},
+    {"text": "用 axiom 视角帮我总结一下这个模块", "family": "keyword_but_summary"}
+  ],
+  "near_neighbor": [
+    {"text": "用 thinking-theory-of-constraints 分析这个瓶颈", "family": "routes_to_thinking_skills"}
+  ]
+}

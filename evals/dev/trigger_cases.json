@@ -1,0 +1,18 @@
+{
+  "recommended_threshold": 0.33,
+  "negative_patterns": ["总结", "翻译", "解释", "头脑风暴", "一次性脚本", "原型", "MVP"],
+  "should_trigger": [
+    {"text": "审查这个微服务的架构有没有扩展性瓶颈", "family": "architecture_review"},
+    {"text": "线上偶发对账不平,做一次根因分析", "family": "bug_diagnosis"},
+    {"text": "新版认证流程上线前做安全评估和威胁建模", "family": "security_assessment"},
+    {"text": "axiom 帮我看看这个跨团队重构方案", "family": "axiom_keyword"}
+  ],
+  "should_not_trigger": [
+    {"text": "把这段会议纪要翻译成英文", "family": "translate"},
+    {"text": "给我讲讲什么是最终一致性", "family": "explain"}
+  ],
+  "near_neighbor": [
+    {"text": "帮我写个工具函数算斐波那契", "family": "trivial"},
+    {"text": "用 TDD 实现一个 LRU 缓存", "family": "generic_coding"}
+  ]
+}

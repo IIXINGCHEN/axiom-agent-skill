@@ -1,0 +1,16 @@
+{
+  "recommended_threshold": 0.33,
+  "negative_patterns": ["总结", "翻译", "解释", "头脑风暴", "一次性脚本", "原型", "MVP"],
+  "should_trigger": [
+    {"text": "这个支付链路要生产级实现,先评审设计", "family": "production_review"},
+    {"text": "用 SDM 把这个需求拆成可执行阶段", "family": "sdm"},
+    {"text": "评审这个 PR 够不够生产级标准", "family": "code_review"}
+  ],
+  "should_not_trigger": [
+    {"text": "总结这篇 RFC 的要点", "family": "summarize"},
+    {"text": "头脑风暴几个功能命名方案", "family": "brainstorm"}
+  ],
+  "near_neighbor": [
+    {"text": "改下这个常量名", "family": "trivial"}
+  ]
+}
