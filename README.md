@@ -21,7 +21,7 @@ AxiomOS 是一个工程认知引擎——不是通用 AI 助手，是嵌入在�
 
 ### 与旧版对比
 
-| 维度 | 旧版 (XBSKILLS/axiom) | 蒸馏版 (axiom-distilled) |
+| 维度 | 旧版 (本地 axiom 源模块) | 蒸馏版 (axiom-distilled) |
 |------|----------------------|-------------------------|
 | 心智模型 | 隐含在文本中 | 6 个显式模型，三重验证 |
 | 表达 DNA | 定性描述 | 量化指标（确定性 5.7:1，结构化 54%） |
@@ -100,8 +100,8 @@ SKILL.md 附录和研究文档中使用以下路径占位符, 指向项目外部
 | 占位符 | 含义 | 实际位置参考 | 获取方式 |
 |--------|------|-------------|---------|
 | `<AXIOM_HOME>` | axiom 命名空间规范目录 (29 个源文件) | Claude Code skill 目录下的 `commands/axiom/` | 安装旧版 axiom skill 后自动生成 |
-| `<AXIOM_SKILL>` | 旧版 axiom SKILL 项目 | `XBSKILLS/axiom/` (同级目录) | 本地项目目录，非公开仓库 |
-| `<NUWA_SKILL>` | nuwa-skill 方法论项目 | `XBSKILLS/nuwa-skill/` (同级目录) | 本地项目目录，非公开仓库 |
+| `<AXIOM_SKILL>` | 旧版 axiom SKILL 项目 | 你的本地 axiom 源项目（同级目录，非公开） | 需用户自行定位，非公开仓库 |
+| `<NUWA_SKILL>` | nuwa-skill 方法论项目 | 你的本地 nuwa-skill 源项目（同级目录，非公开） | 需用户自行定位，非公开仓库 |
 | `<CLAUDE_MD>` | 全局 Agent 约束配置 | `~/.claude/CLAUDE.md` (用户主目录) | 用户自行维护的全局配置文件 |
 
 > **注意**: 研究文档中的行号引用基于源文件快照，仅供追溯调研过程。使用蒸馏版无需访问这些外部路径。

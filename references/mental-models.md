@@ -1,6 +1,8 @@
 # 核心心智模型与内在张力（深度参考）
 
 > 本文件承接 SKILL.md 的心智模型深度内容。SKILL.md 仅保留 6 个模型的一句话速查表与模型 4 默认策略；完整的跨域证据、应用方式、局限性与内在张力在此。
+>
+> **源↔蒸馏关系**：本目录（skills/axiom/references/）是 v21.1 蒸馏版；`commands/axiom/`（config/foundation/modes/cognitive/protocols/standards，v20.0）是源模块库，经 `/axiom:view <module>` 访问。两者是同一套 axiom 教条的两种形态，非字节重复；版本漂移（源 v20.0 / 蒸馏 v21.1）为已知项。
 
 > 三重验证 = 跨域复现(≥2 模块) + 生成力(能推断新场景行为) + 排他性(非通用方法论)
 
