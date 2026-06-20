@@ -42,7 +42,11 @@ git clone https://github.com/IIXINGCHEN/axiom-agent-skill.git <技能目录>/axi
         ├── 04-external-views.md
         ├── 05-decisions.md
         └── 06-timeline.md
+```
 
+> 注：以上为示意；完整结构（含 `references/` 深度参考、`agents/`、`evals/`、`reports/`、`manifest.json`、`VERSION` 等）见 [README.md](README.md)。
+
+```
 # 项目级安装（仅当前项目可用）
 <项目根>/.claude/skills/axiom/
 └── (同上)
@@ -142,7 +146,7 @@ ln -s "/path/to/axiom-agent-skill" ~/.agents/skills/axiom
 ```toml
 # 禁用特定技能（不删除）
 [[skills.config]]
-path = "/path/to/axiom-distilled/SKILL.md"
+path = "/path/to/axiom/SKILL.md"
 enabled = false
 ```
 
@@ -261,7 +265,7 @@ inclusion: always   # 始终加载（默认）
 ### 注意事项
 
 - 文件夹名**必须**为 `axiom`（与 `name` 字段一致）
-- `description` 包含中文关键词，英文请求时匹配率可能降低——如需支持英文激活，可在 `description` 中补充英文关键词
+- `description` 为中英双语（中文触发词 + English keywords），中英文请求均可激活
 - `references/` 目录会被按需加载，符合渐进式披露
 - 额外 `.md` 文件（`COMMANDS.md`、`WORKFLOWS.md` 等）需从 `SKILL.md` 中引用才能被自动读取
 - Kiro 由 Anthropic Claude 驱动，axiom 的表达风格和心智模型与 Claude 原生能力高度兼容

@@ -248,7 +248,7 @@
 2. **安全问题** — SQL 注入、XSS、敏感数据暴露
 3. **性能问题** — N+1 查询、无超时、内存泄漏
 4. **代码质量** — 命名、结构、重复代码
-5. **规范遵循** — 标准 A-K 对照
+5. **规范遵循** — 标准 A-L 对照
 
 #### 输出格式
 
@@ -330,11 +330,11 @@ execute ────────────────▶ .agents/execution-re
 
 | 命令 | 用途 | 输出 |
 |------|------|------|
-| `/axiom:init` | 初始化项目 | `.agents/init/{name}.md` |
-| `/axiom:prd` | 生成 PRD | `.agents/prds/{feature}.md` |
-| `/axiom:plan` | 制定计划 | `.agents/plans/{feature}.md` |
-| `/axiom:execute` | 执行计划 | 实施报告 |
-| `/axiom:review` | 代码审查 | `.agents/code-reviews/{name}.md` |
-| `/axiom:validate` | 全面验证 | `.agents/validation/{project}.md` |
-| `/axiom:execution-report` | 执行报告 | `.agents/execution-reports/` |
-| `/axiom:system-review` | 流程复盘 | `.agents/system-reviews/` |
+| `/project:init` | 初始化项目 | `.agents/init/{name}.md` |
+| `/docs:create-prd` | 生成 PRD | PRD.md |
+| `/workflow:plan` | 制定计划 | `.agents/plans/{feature}.md` |
+| `/workflow:execute` | 执行计划 | 实施报告 |
+| `/validation:code-review` | 代码审查 | `.agents/code-reviews/{name}.md` |
+| `/validation:validate` | 全面验证 | `.agents/validation/{project}.md` |
+| `/validation:execution-report` | 执行报告 | `.agents/execution-reports/` |
+| `/validation:system-review` | 流程复盘 | `.agents/system-reviews/` |

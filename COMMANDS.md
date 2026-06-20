@@ -61,18 +61,18 @@ Self-Diagnostic Report:
 
 ## 工作流命令
 
-以下命令通过 axiom 命名空间访问，对应 WORKFLOWS.md 中的详细流程：
+> 以下工作流命令由**全局命令命名空间**提供（非 axiom 命名空间）；axiom 经 `SKILL.md` 路由，或由 `dev-workflow` 技能编排。axiom 命名空间自身只有上表 4 个系统命令。对应 WORKFLOWS.md 中的详细流程。
 
 | 命令 | 流程 | 说明 |
 |------|------|------|
-| `/axiom:init` | Init | 分析项目结构，生成初始化指南 |
-| `/axiom:prd` | PRD | 从对话生成产品需求文档 |
-| `/axiom:plan` | Plan | 制定实施计划 |
-| `/axiom:execute` | Execute | 执行实施计划 |
-| `/axiom:review` | Review | 代码审查 |
-| `/axiom:validate` | Validate | 全面验证 |
-| `/axiom:execution-report` | Report | 执行报告 |
-| `/axiom:system-review` | System Review | 流程复盘 |
+| `/project:init` | Init | 分析项目结构，生成初始化指南 |
+| `/docs:create-prd` | PRD | 从对话生成产品需求文档 |
+| `/workflow:plan` | Plan | 制定实施计划 |
+| `/workflow:execute` | Execute | 执行实施计划 |
+| `/validation:code-review` | Review | 代码审查（深度审查用 `-pro`） |
+| `/validation:validate` | Validate | 全面验证（测试/lint/类型/构建） |
+| `/validation:execution-report` | Report | 执行报告 |
+| `/validation:system-review` | System Review | 流程复盘 |
 
 ---
 
@@ -94,5 +94,5 @@ axiom 自动通过 Triage 路由到合适模式，也可手动指定：
 | 复杂度 | 推荐路径 | 命令 |
 |--------|---------|------|
 | 简单（改字段） | 直接执行 | 描述任务即可 |
-| 中等（3+ 步骤） | 轻量 Spec | `/axiom:plan` |
-| 复杂（跨模块） | 完整 SDM | `/axiom:plan` → Approve → `/axiom:execute` |
+| 中等（3+ 步骤） | 轻量 Spec | `/workflow:plan` |
+| 复杂（跨模块） | 完整 SDM | `/workflow:plan` → Approve → `/workflow:execute` |
