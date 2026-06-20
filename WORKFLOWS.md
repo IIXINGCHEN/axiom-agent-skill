@@ -288,7 +288,7 @@
 
 ### 5D. Execution Report — 执行报告
 
-**依赖**: workflow:execute
+**依赖**: /workflow:execute
 
 分析 plan vs actual，记录偏差：
 - [通过] Good Divergence
@@ -296,7 +296,7 @@
 
 ### 5E. System Review — 流程复盘
 
-**依赖**: plan + execution-report
+**依赖**: /workflow:plan + /validation:execution-report
 
 追溯偏差根因，生成流程改进建议。
 
