@@ -22,7 +22,7 @@
 
 ## Agentic Protocol 说明
 
-axiom v21.0 的核心升级是 **Agentic Protocol**——先研究再回答，不凭训练语料编造事实。
+axiom 的核心升级是 **Agentic Protocol**——先研究再回答，不凭训练语料编造事实。
 
 ### 3 步工作流
 

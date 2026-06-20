@@ -1,5 +1,32 @@
 # Changelog
 
+> 版本号单一真相源：`VERSION` 文件 + `manifest.json`。
+
+## [21.2.0] - 2026-06-20
+
+### Changed（yao-meta-skill Library 合规化）
+
+- **SKILL.md** 入口瘦身 542→158 行（initial load 2123→1295 tokens，≤ Library 1300 预算），深度教条移入 `references/`
+- description 改为 "Use when + Do not use"；Self-Diagnostic / 会话 XML 改默认关闭、按需
+- 决策启发式去重：9 条与全局 CLAUDE.md 重叠的改为引用，留 axiom 独有 5 条
+- 诚实边界 6→4 条精简
+
+### Added
+
+- `VERSION` 文件（版本单一真相源）+ `manifest.json` 治理元数据（owner / lifecycle=library / maturity=library / context_budget_tier=library）
+- `agents/interface.yaml`（中性兼容元数据）
+- `evals/`（trigger_cases + semantic_config + dev/holdout/blind/adversarial + history）
+- `reports/`（governance-baseline + description_optimization）
+- `references/` 新增：mental-models / expression-dna / delivery / operating-modes / cognitive-core / agentic-protocol
+- `.agents/` 运行时骨架；cc-thinking-skills Ultrathink 映射（cognitive-core.md）
+
+### Fixed
+
+- PORTABILITY：清除硬编码机特征路径（README 的 XBSKILLS → 通用化）
+- README 校正：版本、目录结构、启发式条数、自诊断行为对齐当前实现
+
+---
+
 ## [21.1.0] - 2026-04-13
 
 ### Added
