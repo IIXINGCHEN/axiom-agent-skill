@@ -1,6 +1,6 @@
 # AxiomOS · 工程认知引擎（蒸馏版）
 
-> 基于 nuwa-skill 三重验证方法论重新蒸馏的 axiom v21.0
+> 基于 nuwa-skill 三重验证方法论蒸馏的 axiom（v21.0 蒸馏 + v21.1.0 yao Library 合规化）
 
 ---
 
@@ -27,8 +27,8 @@ AxiomOS 是一个工程认知引擎——不是通用 AI 助手，是嵌入在�
 | 表达 DNA | 定性描述 | 量化指标（确定性 5.7:1，结构化 54%） |
 | Agentic Protocol | 无 | 3 步回答工作流（先研究再回答） |
 | 内在矛盾 | 未处理 | 5 对矛盾显式保留 |
-| 决策启发式 | 14 条，缺案例 | 每条有源文件证据 |
-| 诚实边界 | 4 条 | 8 条，每条有证据 |
+| 决策启发式 | 14 条，缺案例 | 5 独有 + 9 引用 CLAUDE.md（yao 去重） |
+| 诚实边界 | 4 条 | 4 条精简，每条有证据 |
 
 ---
 
@@ -72,23 +72,31 @@ Scope → Architect → Atomize → Approve → Automate → Assess
 ## 目录结构
 
 ```
-axiom-distilled/
-├── SKILL.md                    # 核心技能文件（三重验证后的精炼版）
-├── README.md                   # 本文件
-├── INSTALL.md                  # 安装指南（Claude Code / Codex CLI / Kiro IDE）
-├── COMMANDS.md                 # 命令索引
-├── EXAMPLES.md                 # 示例对话（7 场景 + Agentic Protocol）
-├── USAGE.md                    # Claude Code 使用指南
-├── WORKFLOWS.md                # 详细工作流
-└── references/
-    ├── extraction-notes.md     # 三重验证过程记录
-    └── research/
-        ├── 01-writings.md      # 著作与系统思考
-        ├── 02-conversations.md # 对话与交互协议
-        ├── 03-expression-dna.md # 表达 DNA（量化版）
-        ├── 04-external-views.md # 他者视角与批评
-        ├── 05-decisions.md     # 决策架构
-        └── 06-timeline.md      # 演化时间线
+axiom/                           # 技能根目录
+├── SKILL.md                     # 入口（yao Library 合规，158 行）
+├── README.md                    # 本文件
+├── INSTALL.md                   # 安装指南（Claude Code / Codex / Kiro）
+├── COMMANDS.md                  # axiom namespace 命令索引
+├── EXAMPLES.md                  # 示例对话
+├── USAGE.md                     # Claude Code 使用指南
+├── WORKFLOWS.md                 # 详细工作流
+├── CHANGELOG.md                 # 版本变更记录
+├── LICENSE                      # MIT
+├── manifest.json                # yao Library 治理元数据（owner/lifecycle/maturity）
+├── agents/
+│   └── interface.yaml           # 中性兼容性元数据
+├── references/                  # 深度参考（入口按需加载）
+│   ├── mental-models.md         # 6 心智模型 + 5 内在张力
+│   ├── expression-dna.md        # 表达 DNA（量化）
+│   ├── delivery.md              # SDM 6 阶段 + 12 交付标准 + 交付协议
+│   ├── operating-modes.md       # 10 操作模式目录
+│   ├── cognitive-core.md        # Ultrathink 4 阶段 + cc-thinking 映射
+│   ├── agentic-protocol.md      # Agentic 研究协议（5 维度 + 示例）
+│   ├── extraction-notes.md      # 三重验证过程记录
+│   └── research/                # 调研语料（01-writings … 06-timeline）
+├── evals/                       # 触发评测（trigger_cases + semantic_config + dev/holdout/blind/adversarial）
+├── reports/                     # 治理基线 + description_optimization
+└── .agents/                     # 运行时产物骨架（init/plans/validation/code-reviews/…）
 ```
 
 ---
@@ -149,7 +157,7 @@ axiom 使用中文表达技术概念, 但保留英文缩写和专有名词。首
 | 微任务模式 | Micro-Task Mode | 快速执行小任务的轻量模式 |
 | 深度分析协议 | Ultrathink Protocol | 4 阶段强制思维链 |
 | 安全内核 | Security Kernel | 最高优先级、不可覆盖的安全协议 |
-| 自诊断报告 | Self-Diagnostic Report | 每次回复前的结构化状态报告 |
+| 自诊断报告 | Self-Diagnostic Report | 默认关闭；按需（模式切换/核心任务）生成的结构化状态报告 |
 | 执行合约 | Execution Contract | RFC + 任务列表组成的一次性审批包 |
 | 生产级交付标准 | Production-Grade Deliverable Standards | 12 项 (A-L) 交付标准（10 项刚性 + 2 项推荐） |
 
@@ -168,8 +176,8 @@ axiom 的思想来源：
 
 ## 版本信息
 
-- **版本**：v21.0（三重验证蒸馏版）
-- **蒸馏日期**：2026-04-13
-- **方法论**：nuwa-skill 三重验证 + 6 路并行调研
+- **版本**：v21.1.0（v21.0 三重验证蒸馏 + yao-meta-skill Library 合规化）
+- **v21.0 蒸馏日期**：2026-04-13　**v21.1.0 合规日期**：2026-06-20
+- **方法论**：nuwa-skill 三重验证 + 6 路并行调研；v21.1.0 经 yao-meta-skill Library 合规（入口瘦身 + 契约 + evals）
 - **源文件**：29 个核心规范（axiom 命名空间规范目录）
 - **版本来源**：v20.0 模块化版 (主体) + v20.2 单文件版 (L 标准、交付物协议、合规协议补充)
